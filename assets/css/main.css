@@ -2275,3 +2275,8 @@ button,
     html {
 	scroll-behavior: smooth;
 } 
+
+#menu ul span.opener a {
+	display: inline;
+	padding: 0;
+}
