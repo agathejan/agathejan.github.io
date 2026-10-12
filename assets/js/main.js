@@ -246,6 +246,9 @@
 				$this.on('click', function(event) {
 
 					// Prevent default.
+						// Si on clique sur un lien, on le laisse fonctionner normalement.
+						if ($(event.target).closest('a').length > 0)
+						return;
 						event.preventDefault();
 
 					// Toggle.
