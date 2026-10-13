@@ -2293,3 +2293,12 @@ button,
 	max-height: 20em;
 	margin: 0.5em 0 1.5em 0;
 }
+
+.features article .content .date {
+	color: #f56a6a;
+	font-family: "Roboto Slab", serif;
+	font-size: 0.75em;
+	letter-spacing: 0.075em;
+	margin: 0 0 0.5em 0;
+	text-transform: uppercase;
+}
