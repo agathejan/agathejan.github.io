@@ -2470,3 +2470,105 @@ ul.tags li.main {
 	padding-top: 1.5em;
 }
 .skill-group h3 { margin-bottom: 1.2em; }
+
+/* Grille de miniatures */
+.project-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+	gap: 2em;
+	margin: 0 0 2em 0;
+}
+
+.project-card {
+	border-bottom: 0;
+	display: block;
+}
+
+.project-card .thumb {
+	aspect-ratio: 16 / 9;
+	border-radius: 0.375em;
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+
+.project-card .thumb img {
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+	width: 100%;
+}
+
+/* Voile + icône lecture au survol */
+.project-card .thumb:before {
+	background: rgba(61, 68, 73, 0.45);
+	content: '';
+	inset: 0;
+	opacity: 0;
+	position: absolute;
+	transition: opacity 0.3s ease;
+	z-index: 1;
+}
+
+.project-card .thumb:after {
+	color: #ffffff;
+	content: '\f04b';
+	font-family: 'Font Awesome 5 Free';
+	font-size: 2rem;
+	font-weight: 900;
+	left: 50%;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: opacity 0.3s ease;
+	z-index: 2;
+}
+
+.project-card:hover .thumb img { transform: scale(1.05); }
+.project-card:hover .thumb:before,
+.project-card:hover .thumb:after { opacity: 1; }
+
+.project-card h3 {
+	font-size: 1.1em;
+	margin: 0.8em 0 0.2em 0;
+}
+
+.project-card p {
+	color: #7f888f;
+	font-size: 0.85em;
+	margin: 0;
+}
+
+/* Page projet */
+.back-link {
+	display: inline-block;
+	font-family: "Roboto Slab", serif;
+	font-size: 0.8em;
+	letter-spacing: 0.075em;
+	margin: 0 0 2em 0;
+	text-transform: uppercase;
+}
+
+.project-page .video-wrapper { max-width: 60em; }
+
+.project-meta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em 3em;
+	list-style: none;
+	margin: 0 0 2em 0;
+	padding: 0;
+}
+
+.project-meta li { padding: 0; }
+
+.project-meta .label {
+	color: #f56a6a;
+	display: block;
+	font-family: "Roboto Slab", serif;
+	font-size: 0.75em;
+	letter-spacing: 0.075em;
+	text-transform: uppercase;
+}
