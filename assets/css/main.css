@@ -2303,8 +2303,28 @@ button,
 	text-transform: uppercase;
 }
 
+/* Titres Formations / Expériences */
 #parcours > h3 {
+	border-left: 4px solid #f56a6a;
+	font-size: 1.4em;
+	letter-spacing: 0.075em;
+	margin: 4em 0 2em 0;
+	padding-left: 0.7em;
+	text-transform: uppercase;
+}
+
+#parcours > header + h3 {
 	margin-top: 1em;
+}
+
+/* Formations et expériences : une ligne par élément, pleine largeur */
+.features.list article {
+	width: calc(100% - 3em);
+	margin: 0 0 3em 3em;
+}
+
+.features.list article:nth-child(2n - 1) {
+	margin-right: 0;
 }
 
 .features.list article:nth-child(2n) {
@@ -2319,23 +2339,12 @@ button,
 	margin-bottom: 0;
 }
 
-.features.list article .icon {
-	height: 7em;
-	line-height: 7em;
-	width: 7em;
-}
-
-.features.list article .icon:after {
-	height: 5em;
-	margin: -2.5em 0 0 -2.5em;
-	width: 5em;
-}
-
+/* Icônes */
 .features.list article .icon {
 	height: 6em;
 	line-height: 6em;
-	width: 6em;
 	margin-right: 1.5em;
+	width: 6em;
 }
 
 .features.list article .icon:before {
@@ -2346,6 +2355,16 @@ button,
 	height: 4.5em;
 	margin: -2.25em 0 0 -2.25em;
 	width: 4.5em;
+}
+
+/* Textes */
+.features.list article .content h3 {
+	font-size: 1.35em;
+}
+
+.features.list article .content p:not(.date) {
+	font-size: 1.05em;
+	line-height: 1.7;
 }
 
 .skills {
