@@ -2571,7 +2571,7 @@ ul.tags li.main {
 
 /* Vidéo + caractéristiques côte à côte */
 .project-top {
-	align-items: start;
+	align-items: center;
 	display: grid;
 	gap: 2.5em;
 	grid-template-columns: 2fr 1fr;
@@ -2598,6 +2598,7 @@ ul.tags li.main {
 
 /* Trois images alignées avec texte dessous */
 .project-gallery {
+	align-items: start;
 	display: grid;
 	gap: 2em;
 	grid-template-columns: repeat(3, 1fr);
@@ -2607,10 +2608,9 @@ ul.tags li.main {
 .project-gallery figure { margin: 0; }
 
 .project-gallery img {
-	aspect-ratio: 4 / 3;
 	border-radius: 0.375em;
 	display: block;
-	object-fit: cover;
+	height: auto;
 	width: 100%;
 }
 
