@@ -2645,13 +2645,6 @@ ul.tags li.main {
 	}
 }
 
-	.project-top .project-meta li,
-	.project-top .project-meta li:first-child {
-		border-top: 0;
-		padding: 0;
-	}
-
-
 @media screen and (max-width: 736px) {
 	.project-gallery { grid-template-columns: 1fr; }
 }
