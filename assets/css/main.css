@@ -2626,11 +2626,8 @@ ul.tags li.main {
 
 @media screen and (max-width: 980px) {
 	.project-top { grid-template-columns: 1fr; }
-	.project-top .project-meta {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1em 3em;
-	}
+}
+
 	.project-top .project-meta li,
 	.project-top .project-meta li:first-child {
 		border-top: 0;
