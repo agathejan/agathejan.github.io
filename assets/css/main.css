@@ -2626,6 +2626,23 @@ ul.tags li.main {
 
 @media screen and (max-width: 980px) {
 	.project-top { grid-template-columns: 1fr; }
+
+	.project-top .project-meta {
+		display: grid;
+		gap: 1.5em 2em;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.project-top .project-meta li,
+	.project-top .project-meta li:first-child {
+		border-top: 0;
+		padding: 0;
+	}
+
+	/* Les infos longues prennent toute la largeur */
+	.project-top .project-meta li:nth-child(n+4) {
+		grid-column: 1 / -1;
+	}
 }
 
 	.project-top .project-meta li,
@@ -2633,7 +2650,7 @@ ul.tags li.main {
 		border-top: 0;
 		padding: 0;
 	}
-}
+
 
 @media screen and (max-width: 736px) {
 	.project-gallery { grid-template-columns: 1fr; }
