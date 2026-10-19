@@ -2625,23 +2625,31 @@ ul.tags li.main {
 }
 
 @media screen and (max-width: 980px) {
-	.project-top { grid-template-columns: 1fr; }
-
-	.project-top .project-meta {
-		display: grid;
-		gap: 1.5em 2em;
-		grid-template-columns: repeat(2, 1fr);
+	.project-top {
+		gap: 2em;
+		grid-template-columns: minmax(0, 1fr);
 	}
 
-	.project-top .project-meta li,
+	.project-top .project-meta { display: block; }
+
+	.project-top .project-meta li {
+		align-items: baseline;
+		border-top: solid 1px rgba(210, 215, 217, 0.75);
+		display: flex;
+		gap: 1.5em;
+		justify-content: space-between;
+		padding: 0.8em 0;
+		text-align: right;
+	}
+
 	.project-top .project-meta li:first-child {
 		border-top: 0;
-		padding: 0;
+		padding-top: 0;
 	}
 
-	/* Les infos longues prennent toute la largeur */
-	.project-top .project-meta li:nth-child(n+4) {
-		grid-column: 1 / -1;
+	.project-top .project-meta .label {
+		flex-shrink: 0;
+		text-align: left;
 	}
 }
 
