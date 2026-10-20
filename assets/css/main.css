@@ -2598,21 +2598,16 @@ ul.tags li.main {
 
 /* Trois images alignées avec texte dessous */
 .project-gallery {
+	align-items: start;
 	display: grid;
-	gap: 0 2em;
+	gap: 2em;
 	grid-template-columns: repeat(3, 1fr);
 	margin: 0 0 3em 0;
 }
 
-.project-gallery figure {
-	display: grid;
-	grid-row: span 3;
-	grid-template-rows: subgrid;
-	margin: 0;
-}
+.project-gallery figure { margin: 0; }
 
 .project-gallery img {
-	align-self: start;
 	border-radius: 0.375em;
 	display: block;
 	height: auto;
@@ -2626,7 +2621,7 @@ ul.tags li.main {
 
 .project-gallery p {
 	font-size: 0.9em;
-	margin: 0 0 1em 0;
+	margin: 0;
 }
 
 @media screen and (max-width: 980px) {
@@ -2660,4 +2655,21 @@ ul.tags li.main {
 
 @media screen and (max-width: 736px) {
 	.project-gallery { grid-template-columns: 1fr; }
+}
+
+/* Textes justifiés */
+#main p {
+	-webkit-hyphens: auto;
+	hyphens: auto;
+	text-align: justify;
+}
+
+/* Exceptions : sous-titres, dates et petits textes restent alignés à gauche */
+#main header p,
+.features article .content .date,
+.project-card p,
+.project-gallery p {
+	-webkit-hyphens: manual;
+	hyphens: manual;
+	text-align: left;
 }
