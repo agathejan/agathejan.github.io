@@ -2656,10 +2656,3 @@ ul.tags li.main {
 @media screen and (max-width: 736px) {
 	.project-gallery { grid-template-columns: 1fr; }
 }
-
-/* Textes justifiés */
-#main p {
-	-webkit-hyphens: auto;
-	hyphens: auto;
-	text-align: justify;
-}
