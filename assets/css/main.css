@@ -2663,13 +2663,3 @@ ul.tags li.main {
 	hyphens: auto;
 	text-align: justify;
 }
-
-/* Exceptions : sous-titres, dates et petits textes restent alignés à gauche */
-#main header p,
-.features article .content .date,
-.project-card p,
-.project-gallery p {
-	-webkit-hyphens: manual;
-	hyphens: manual;
-	text-align: left;
-}
