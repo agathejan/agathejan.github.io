@@ -2475,56 +2475,19 @@ ul.tags li.main {
 	margin: 0 0 2em 0;
 }
 
-
-/* Cartes avec titre sur l'image */
+/* Carte : image plein cadre, titre dessus */
 .project-card {
 	aspect-ratio: 16 / 9;
-	border-radius: 0.375em;
-	overflow: hidden;
-	position: relative;
-}
-
-.project-card .thumb {
-	aspect-ratio: auto;
-	border-radius: 0;
-	inset: 0;
-	position: absolute;
-}
-
-/* Dégradé permanent au bas de l'image */
-.project-card .thumb:before {
-	background: linear-gradient(to top, rgba(61, 68, 73, 0.85) 0%, rgba(61, 68, 73, 0) 60%);
-	opacity: 1;
-}
-
-.project-card h3,
-.project-card p {
-	left: 1.5em;
-	position: absolute;
-	right: 1.5em;
-	z-index: 3;
-}
-
-.project-card h3 {
-	bottom: 2.6em;
-	color: #ffffff;
-	font-size: 1.3em;
-	margin: 0;
-}
-
-.project-card p {
-	bottom: 1.2em;
-	color: rgba(255, 255, 255, 0.85);
-	font-size: 0.8em;
-	margin: 0;
-}
-
-.project-card .thumb {
-	aspect-ratio: 16 / 9;
+	border-bottom: 0;
 	border-radius: 0.375em;
 	display: block;
 	overflow: hidden;
 	position: relative;
+}
+
+.project-card .thumb {
+	inset: 0;
+	position: absolute;
 }
 
 .project-card .thumb img {
@@ -2533,6 +2496,16 @@ ul.tags li.main {
 	object-fit: cover;
 	transition: transform 0.3s ease;
 	width: 100%;
+}
+
+/* Dégradé permanent pour la lisibilité du texte */
+.project-card:after {
+	background: linear-gradient(to top, rgba(30, 34, 38, 0.92) 0%, rgba(30, 34, 38, 0.6) 35%, rgba(30, 34, 38, 0) 75%);
+	content: '';
+	inset: 0;
+	pointer-events: none;
+	position: absolute;
+	z-index: 1;
 }
 
 /* Voile + icône lecture au survol */
@@ -2565,15 +2538,33 @@ ul.tags li.main {
 .project-card:hover .thumb:before,
 .project-card:hover .thumb:after { opacity: 1; }
 
+/* Texte sur l'image */
+.project-card h3,
+.project-card p {
+	left: 1.5em;
+	position: absolute;
+	right: 1.5em;
+	z-index: 3;
+}
+
 .project-card h3 {
-	font-size: 1.1em;
-	margin: 0.8em 0 0.2em 0;
+	bottom: 2.6em;
+	color: #ffffff;
+	font-size: 1.3em;
+	margin: 0;
+	text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+.project-card h3:last-child {
+	bottom: 1.2em;
 }
 
 .project-card p {
-	color: #7f888f;
-	font-size: 0.85em;
+	bottom: 1.2em;
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 0.8em;
 	margin: 0;
+	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Page projet */
