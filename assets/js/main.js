@@ -258,6 +258,7 @@
 				});
 
 			});
+
 		// Carousel.
 		$('.carousel').each(function() {
 
@@ -273,4 +274,5 @@
 			});
 
 		});
+		
 })(jQuery);
