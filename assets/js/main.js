@@ -258,5 +258,19 @@
 				});
 
 			});
+		// Carousel.
+		$('.carousel').each(function() {
 
+			var $carousel = $(this),
+				track = $carousel.find('.carousel-track')[0];
+
+			$carousel.find('.carousel-btn.next').on('click', function() {
+				track.scrollBy({ left: track.clientWidth, behavior: 'smooth' });
+			});
+
+			$carousel.find('.carousel-btn.prev').on('click', function() {
+				track.scrollBy({ left: -track.clientWidth, behavior: 'smooth' });
+			});
+
+		});
 })(jQuery);
