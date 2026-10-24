@@ -2833,3 +2833,39 @@ ul.actions li {
 		padding: 1em 1.5em;
 	}
 }
+
+/* Message "projets à venir" */
+.coming-soon {
+	border: solid 2px #f56a6a;
+	border-radius: 0.375em;
+	margin: 0 auto;
+	max-width: 40em;
+	padding: 2.5em 2em;
+	text-align: center;
+}
+
+.coming-soon .icon:before {
+	color: #f56a6a;
+	font-size: 2.5rem;
+}
+
+.coming-soon h3 {
+	font-size: 1.5em;
+	letter-spacing: 0.075em;
+	margin: 0.75em 0 0.5em 0;
+	text-transform: uppercase;
+}
+
+.coming-soon p {
+	margin: 0;
+}
+
+@media screen and (max-width: 736px) {
+	.coming-soon {
+		padding: 2em 1.25em;
+	}
+
+	.coming-soon h3 {
+		font-size: 1.2em;
+	}
+}
