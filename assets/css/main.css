@@ -2802,3 +2802,34 @@ ul.tags li.main {
 		width: 2.9em;
 	}
 }
+
+/* Boutons d'actions : retour à la ligne */
+ul.actions {
+	flex-wrap: wrap;
+	gap: 1em;
+	margin-left: 0;
+}
+
+ul.actions li {
+	padding: 0;
+}
+
+/* Téléphone : boutons pleine largeur, empilés */
+@media screen and (max-width: 736px) {
+
+	ul.actions:not(.special) {
+		flex-direction: column;
+	}
+
+	ul.actions:not(.special) li {
+		width: 100%;
+	}
+
+	ul.actions:not(.special) .button {
+		width: 100%;
+		white-space: normal;
+		height: auto;
+		line-height: 1.4;
+		padding: 1em 1.5em;
+	}
+}
