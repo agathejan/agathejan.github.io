@@ -2746,3 +2746,59 @@ ul.tags li.main {
 
 .carousel-btn.prev { left: 0.5em; }
 .carousel-btn.next { right: 0.5em; }
+
+/* Parcours : version téléphone */
+@media screen and (max-width: 736px) {
+
+	.features.list article {
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.features.list article .icon {
+		height: 4.5em;
+		line-height: 4.5em;
+		margin: 0 1.25em 0 0;
+		width: 4.5em;
+	}
+
+	.features.list article .icon:before {
+		font-size: 1.25rem;
+	}
+
+	.features.list article .icon:after {
+		height: 3.25em;
+		margin: -1.625em 0 0 -1.625em;
+		width: 3.25em;
+	}
+
+	.features.list article .content h3 {
+		font-size: 1.1em;
+	}
+
+	.features.list article .content p:not(.date) {
+		font-size: 1em;
+		line-height: 1.6;
+	}
+}
+
+/* Très petits écrans */
+@media screen and (max-width: 480px) {
+
+	.features.list article .icon {
+		height: 4em;
+		line-height: 4em;
+		margin-right: 1em;
+		width: 4em;
+	}
+
+	.features.list article .icon:before {
+		font-size: 1.1rem;
+	}
+
+	.features.list article .icon:after {
+		height: 2.9em;
+		margin: -1.45em 0 0 -1.45em;
+		width: 2.9em;
+	}
+}
