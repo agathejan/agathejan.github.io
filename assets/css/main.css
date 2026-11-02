@@ -3025,18 +3025,3 @@ ul.actions li {
 	.reels-showcase { padding: 1.5em 1em; }
 	.reels-showcase-grid { grid-template-columns: minmax(0, 1fr); }
 }
-
-/* Banner : la photo prend exactement la hauteur du texte */
-#banner .image {
-	position: relative;
-}
-
-#banner .image img {
-	height: 100%;
-	left: 0;
-	object-fit: cover;
-	object-position: center;
-	position: absolute;
-	top: 0;
-	width: 100%;
-}
