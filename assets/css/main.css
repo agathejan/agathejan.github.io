@@ -2870,29 +2870,86 @@ ul.actions li {
 	}
 }
 
-/* Grille de Reels */
-.reels-grid {
-	align-items: start;
-	display: grid;
-	gap: 2em;
-	grid-template-columns: repeat(auto-fill, minmax(min(100%, 20em), 1fr));
+/* Intro de la page série */
+.project-intro {
 	margin: 0 0 3em 0;
+	max-width: 60em;
 }
 
-.reels-grid figure { margin: 0; }
+.project-intro .lead {
+	border-left: 4px solid #f56a6a;
+	color: #3d4449;
+	font-size: 1.2em;
+	line-height: 1.7;
+	margin: 0 0 2em 0;
+	padding-left: 1em;
+}
 
-.reels-grid figcaption {
-	font-family: "Roboto Slab", serif;
-	font-size: 0.8em;
+/* Caractéristiques en petites cartes */
+.project-meta.cards {
+	display: grid;
+	gap: 1em;
+	grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+	margin: 0;
+}
+
+.project-meta.cards li {
+	background-color: #f5f6f7;
+	border-radius: 0.375em;
+	padding: 1em 1.25em;
+}
+
+/* Plaquette corail */
+.reels-showcase {
+	background-color: #f56a6a;
+	border-radius: 0.375em;
+	margin: 0 0 3em 0;
+	padding: 3em;
+}
+
+.reels-showcase h2 {
+	color: #ffffff;
 	letter-spacing: 0.075em;
-	margin-top: 0.75em;
+	margin: 0 0 1.5em 0;
 	text-align: center;
 	text-transform: uppercase;
 }
 
-.reels-grid .instagram-media {
+.reels-showcase-grid {
+	align-items: start;
+	display: grid;
+	gap: 2em;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.reels-showcase-grid figure { margin: 0; }
+
+.reels-showcase-grid .instagram-media {
+	border-radius: 0.375em !important;
+	box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.2) !important;
 	margin: 0 auto !important;
 	max-width: 100% !important;
 	min-width: 0 !important;
 	width: 100% !important;
+}
+
+.reels-showcase-grid figcaption {
+	color: #ffffff;
+	font-family: "Roboto Slab", serif;
+	font-size: 0.8em;
+	font-weight: 700;
+	letter-spacing: 0.075em;
+	margin-top: 1em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 980px) {
+	.reels-showcase { padding: 2em; }
+	.reels-showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media screen and (max-width: 736px) {
+	.reels-showcase { padding: 1.5em 1em; }
+	.reels-showcase-grid { grid-template-columns: minmax(0, 1fr); }
 }
