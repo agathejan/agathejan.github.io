@@ -2886,30 +2886,45 @@ ul.actions li {
 	padding-left: 1em;
 }
 
-/* Caractéristiques en petites cartes */
+/* Caractéristiques : bandeau ordonné */
 .project-meta.cards {
+	background: #ffffff;
+	border: solid 1px rgba(210, 215, 217, 0.75);
+	border-radius: 0.375em;
 	display: grid;
-	gap: 1em;
-	grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+	gap: 0;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
 	margin: 0;
+	overflow: hidden;
 }
 
 .project-meta.cards li {
-	background-color: #f5f6f7;
-	border-radius: 0.375em;
-	padding: 1em 1.25em;
+	background: none;
+	border-left: solid 1px rgba(210, 215, 217, 0.75);
+	color: #3d4449;
+	font-family: "Roboto Slab", serif;
+	font-size: 1.05em;
+	font-weight: 700;
+	padding: 1.25em 1.5em;
 }
 
-/* Plaquette corail */
+.project-meta.cards li:first-child { border-left: 0; }
+
+.project-meta.cards .label {
+	margin-bottom: 0.4em;
+}
+
+/* Plaquette : fond doux */
 .reels-showcase {
-	background-color: #f56a6a;
-	border-radius: 0.375em;
+	background: linear-gradient(180deg, #fdf3f3 0%, #fbe6e6 100%);
+	border: solid 1px rgba(245, 106, 106, 0.2);
+	border-radius: 0.75em;
 	margin: 0 0 3em 0;
 	padding: 3em;
 }
 
 .reels-showcase h2 {
-	color: #ffffff;
+	color: #3d4449;
 	letter-spacing: 0.075em;
 	margin: 0 0 1.5em 0;
 	text-align: center;
@@ -2919,35 +2934,58 @@ ul.actions li {
 .reels-showcase-grid {
 	align-items: start;
 	display: grid;
-	gap: 2em;
+	gap: 2.5em;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .reels-showcase-grid figure { margin: 0; }
 
-.reels-showcase-grid .instagram-media {
-	border-radius: 0.375em !important;
-	box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.2) !important;
-	margin: 0 auto !important;
+/* Cadre perso + zoom au survol */
+.reel-frame {
+	background: #ffffff;
+	border: solid 1px rgba(210, 215, 217, 0.6);
+	border-radius: 0.75em;
+	box-shadow: 0 0.25em 1em rgba(61, 68, 73, 0.08);
+	padding: 0.75em;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reel-frame:hover {
+	box-shadow: 0 0.75em 2em rgba(245, 106, 106, 0.25);
+	transform: translateY(-4px) scale(1.03);
+}
+
+.reel-frame .instagram-media {
+	border: 0 !important;
+	border-radius: 0.5em !important;
+	box-shadow: none !important;
+	margin: 0 !important;
 	max-width: 100% !important;
 	min-width: 0 !important;
 	width: 100% !important;
 }
 
+.reel-frame blockquote.instagram-media {
+	font-style: normal;
+	padding: 0;
+}
+
 .reels-showcase-grid figcaption {
-	color: #ffffff;
+	color: #3d4449;
 	font-family: "Roboto Slab", serif;
 	font-size: 0.8em;
 	font-weight: 700;
 	letter-spacing: 0.075em;
-	margin-top: 1em;
+	margin-top: 1.25em;
 	text-align: center;
 	text-transform: uppercase;
 }
 
 @media screen and (max-width: 980px) {
+	.project-meta.cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.project-meta.cards li:nth-child(odd) { border-left: 0; }
+	.project-meta.cards li:nth-child(n+3) { border-top: solid 1px rgba(210, 215, 217, 0.75); }
 	.reels-showcase { padding: 2em; }
-	.reels-showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media screen and (max-width: 736px) {
