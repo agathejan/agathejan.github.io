@@ -2869,3 +2869,30 @@ ul.actions li {
 		font-size: 1.2em;
 	}
 }
+
+/* Grille de Reels */
+.reels-grid {
+	align-items: start;
+	display: grid;
+	gap: 2em;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 20em), 1fr));
+	margin: 0 0 3em 0;
+}
+
+.reels-grid figure { margin: 0; }
+
+.reels-grid figcaption {
+	font-family: "Roboto Slab", serif;
+	font-size: 0.8em;
+	letter-spacing: 0.075em;
+	margin-top: 0.75em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.reels-grid .instagram-media {
+	margin: 0 auto !important;
+	max-width: 100% !important;
+	min-width: 0 !important;
+	width: 100% !important;
+}
