@@ -2687,16 +2687,47 @@ ul.tags li.main {
 	.project-gallery { grid-template-columns: 1fr; }
 }
 
+/* Galerie photo : même esprit que la plaquette des Reels */
+.photo-showcase {
+	background: linear-gradient(180deg, #fdf3f3 0%, #fbe6e6 100%);
+	border: solid 1px rgba(245, 106, 106, 0.2);
+	border-radius: 0.75em;
+	margin: 0 0 3em 0;
+	padding: 3em;
+}
+
+.photo-showcase h2 {
+	color: #3d4449;
+	letter-spacing: 0.075em;
+	margin: 0 0 1.5em 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/* Cadre blanc, largeur limitée et centrée */
 .carousel {
+	background: #ffffff;
+	border: solid 1px rgba(210, 215, 217, 0.6);
+	border-radius: 0.75em;
+	box-shadow: 0 0.25em 1em rgba(61, 68, 73, 0.08);
+	margin: 0 auto;
+	max-width: 44em;
+	padding: 0.75em;
 	position: relative;
+	transition: box-shadow 0.3s ease;
+}
+
+.carousel:hover {
+	box-shadow: 0 0.75em 2em rgba(245, 106, 106, 0.25);
 }
 
 .carousel-track {
+	border-radius: 0.5em;
 	display: flex;
-	gap: 1em;
+	gap: 0;
 	overflow-x: auto;
-	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
+	scroll-snap-type: x mandatory;
 	scrollbar-width: none;
 }
 
@@ -2706,47 +2737,67 @@ ul.tags li.main {
 
 .carousel-slide {
 	flex: 0 0 100%;
-	scroll-snap-align: center;
 	margin: 0;
+	scroll-snap-align: center;
 }
 
+/* Hauteur raisonnable, fond neutre pour les photos verticales */
 .carousel-slide img {
-	width: 100%;
-	height: 65vh;
+	background: #f5f6f7;
+	border-radius: 0.5em;
+	display: block;
+	height: min(55vh, 30em);
 	object-fit: contain;
-	background: transparent;
+	width: 100%;
 }
 
 .carousel-slide figcaption {
+	color: #3d4449;
+	font-family: "Roboto Slab", serif;
+	font-size: 0.8em;
+	font-weight: 700;
+	letter-spacing: 0.075em;
+	margin: 1.25em 0 0.5em 0;
 	text-align: center;
-	margin-top: 0.5em;
-	font-size: 0.9em;
+	text-transform: uppercase;
 }
 
+/* Boutons : centrés sur l'image (et non sur la légende) */
 .carousel-btn {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	z-index: 2;
-	width: 2.5em;
-	height: 2.5em;
-	padding: 0;
+	background: rgba(255, 255, 255, 0.9);
 	border: 0;
 	border-radius: 50%;
-	box-shadow: none;
-	background: rgba(0, 0, 0, 0.55);
-	color: #fff !important;
-	font-size: 1.6em;
-	line-height: 1;
+	box-shadow: 0 0.15em 0.6em rgba(61, 68, 73, 0.25);
+	color: #f56a6a !important;
 	cursor: pointer;
+	font-size: 1.4em;
+	height: 2.2em;
+	line-height: 1;
+	padding: 0;
+	position: absolute;
+	top: calc(0.75em + min(55vh, 30em) / 2);
+	transform: translateY(-50%);
+	width: 2.2em;
+	z-index: 2;
 }
 
 .carousel-btn:hover {
-	background: rgba(0, 0, 0, 0.8);
+	background: #f56a6a;
+	color: #ffffff !important;
 }
 
-.carousel-btn.prev { left: 0.5em; }
-.carousel-btn.next { right: 0.5em; }
+.carousel-btn.prev { left: 1.5em; }
+.carousel-btn.next { right: 1.5em; }
+
+@media screen and (max-width: 980px) {
+	.photo-showcase { padding: 2em; }
+}
+
+@media screen and (max-width: 736px) {
+	.photo-showcase { padding: 1.5em 1em; }
+	.carousel-slide img { height: min(45vh, 24em); }
+	.carousel-btn { top: calc(0.75em + min(45vh, 24em) / 2); }
+}
 
 /* Parcours : version téléphone */
 @media screen and (max-width: 736px) {
