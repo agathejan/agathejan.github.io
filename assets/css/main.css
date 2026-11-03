@@ -3077,3 +3077,19 @@ ul.actions li {
 	object-position: center top;
 	width: 100%;
 }
+
+/* Accueil : photo carrée */
+#banner .image {
+	align-self: center;
+	aspect-ratio: 1 / 1;
+}
+
+/* Portrait / téléphone : carré aussi, au lieu de la hauteur fixe */
+@media screen and (orientation: portrait) {
+	#banner .image {
+		height: auto;
+		max-height: none;
+		min-height: 0;
+		margin: 0 1.25em 4em 0; /* marge à droite pour le carré décalé */
+	}
+}
