@@ -3035,8 +3035,8 @@ ul.actions li {
 #banner .image img {
 	height: 100%;
 	inset: 0;
-	object-fit: cover;
-	object-position: center top;
+	object-fit: contain;
+	object-position: center;
 	position: absolute;
 	width: 100%;
 }
