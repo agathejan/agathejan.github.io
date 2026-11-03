@@ -3026,26 +3026,45 @@ ul.actions li {
 	.reels-showcase-grid { grid-template-columns: minmax(0, 1fr); }
 }
 
-/* Accueil : l'image de la bannière prend la hauteur du texte */
+/* Accueil : photo arrondie avec carré décalé derrière */
 #banner .image {
 	align-self: stretch;
+	border-radius: 1.5em;
 	position: relative;
 }
 
-#banner .image img {
-	height: 100%;
+/* Le carré décalé */
+#banner .image:before {
+	background: #f56a6a;
+	border-radius: 1.5em;
+	content: '';
 	inset: 0;
-	object-fit: contain;
-	object-position: center;
 	position: absolute;
-	width: 100%;
+	transform: translate(1.25em, 1.25em);
+	z-index: 0;
 }
 
-/* Projets phares : toutes les miniatures au même format */
-.posts article .image img {
-	aspect-ratio: 16 / 9;
-	height: auto;
+#banner .image img {
+	border-radius: 1.5em;
+	height: 100%;
+	inset: 0;
 	object-fit: cover;
-	object-position: center top;
+	object-position: 50% 20%; /* à ajuster pour centrer ton visage */
+	position: absolute;
 	width: 100%;
+	z-index: 1;
+}
+
+/* Rapprocher la photo du texte (écran large uniquement) */
+@media screen and (orientation: landscape) {
+	#banner .image {
+		margin-left: 2em;
+	}
+}
+
+/* Petit écran : décalage plus discret */
+@media screen and (max-width: 736px) {
+	#banner .image:before {
+		transform: translate(0.75em, 0.75em);
+	}
 }
