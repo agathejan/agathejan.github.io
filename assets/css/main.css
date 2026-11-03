@@ -3082,6 +3082,7 @@ ul.actions li {
 #banner .image {
 	align-self: center;
 	aspect-ratio: 1 / 1;
+  max-width: 28em;
 }
 
 /* Portrait / téléphone : carré aussi, au lieu de la hauteur fixe */
